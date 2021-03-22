@@ -1,3 +1,3 @@
-tensorflow>=2.0.0
-tensorflow-datasets
 optuna
+tensorflow
+tensorflow-datasets
