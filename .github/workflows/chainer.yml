@@ -32,7 +32,7 @@ jobs:
         pip install git+https://github.com/optuna/optuna.git
         python -c 'import optuna'
 
-        pip install chainer/requirements.txt
+        pip install -r chainer/requirements.txt
     - name: Run examples
       run: |
         python chainer_simple.py
