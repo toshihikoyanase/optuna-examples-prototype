@@ -35,8 +35,8 @@ jobs:
         pip install -r chainer/requirements.txt
     - name: Run examples
       run: |
-        python chainer_simple.py
-        python chainer_integration.py
+        python chainer/chainer_simple.py
+        python chainer/chainer_integration.py
       env:
         OMP_NUM_THREADS: 1
     - name: Run multi-node examples
