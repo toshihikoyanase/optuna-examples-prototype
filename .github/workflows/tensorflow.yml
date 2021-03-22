@@ -32,7 +32,7 @@ jobs:
     - name: Run examples
       run: |
         python tensorflow/tensorflow_eager_simple.py
-        python tensorflow/estimator_simple.py
-        python tensorflow/estimator_integration.py
+        python tensorflow/tensorflow_estimator_simple.py
+        python tensorflow/tensorflow_estimator_integration.py
       env:
         OMP_NUM_THREADS: 1
