@@ -28,9 +28,9 @@ jobs:
         pip install git+https://github.com/optuna/optuna.git
         python -c 'import optuna'
 
-        pip install -r hydra/requirements.txt
-    - name: Run Hydra examples
+        pip install -r rl/requirements.txt
+    - name: Run examples
       run: |
-        python hydra/simple.py --multirun > /dev/null
+        python rl/sb3_simple.py
       env:
         OMP_NUM_THREADS: 1
