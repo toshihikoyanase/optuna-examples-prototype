@@ -1,4 +1,4 @@
-name: examples
+name: hydra
 
 on:
   push:
