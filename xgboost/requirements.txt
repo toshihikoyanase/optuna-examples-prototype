@@ -1,2 +1,4 @@
+numpy
 optuna
+scikit-learn
 xgboost
