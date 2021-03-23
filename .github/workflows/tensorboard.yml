@@ -1,4 +1,4 @@
-name: hydra
+name: tensorboard
 
 on:
   push:
