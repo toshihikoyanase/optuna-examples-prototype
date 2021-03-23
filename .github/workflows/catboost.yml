@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
+  pull_request:
+    paths:
+      - 'catboost/**'
+      - '.github/workflows/catboost.yml'
 
 jobs:
   examples:

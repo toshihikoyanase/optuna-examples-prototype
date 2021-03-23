@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
+  pull_request:
+    paths:
+      - 'rl/**'
+      - '.github/workflows/rl.yml'
 
 jobs:
   examples:

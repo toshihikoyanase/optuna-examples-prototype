@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
+  pull_request:
+    paths:
+      - 'tensorboard/**'
+      - '.github/workflows/tensorbloard.yml'
 
 jobs:
   examples:

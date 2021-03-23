@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
+  pull_request:
+    paths:
+      - 'hydra/**'
+      - '.github/workflows/hydra.yml'
+
 
 jobs:
   examples:

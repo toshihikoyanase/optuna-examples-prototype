@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
+  pull_request:
+    paths:
+      - 'haiku/**'
+      - '.github/workflows/haiku.yml'
+
 
 jobs:
   examples:

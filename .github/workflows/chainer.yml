@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
+  pull_request:
+    paths:
+      - 'chainer/**'
+      - '.github/workflows/chainer.yml'
 
 jobs:
   examples:
