@@ -1,4 +1,5 @@
 dm-haiku
 numpy
 optax
+tensorflow
 tensorflow-datasets
