@@ -43,8 +43,8 @@ jobs:
     #     OMP_NUM_THREADS: 1
     - name: Run PyTorch checkpoint example
       run: |
-        timeout 20 python examples/pytorch/pytorch_checkpoint.py > /dev/null
-        python examples/pytorch/pytorch_checkpoint.py > /dev/null
+        timeout 20 python pytorch/pytorch_checkpoint.py > /dev/null
+        python pytorch/pytorch_checkpoint.py > /dev/null
       env:
         OMP_NUM_THREADS: 1
     # - name: Run multi-node examples
