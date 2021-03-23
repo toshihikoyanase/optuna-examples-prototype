@@ -36,31 +36,30 @@ jobs:
         python -c 'import optuna'
 
         pip install -r pytorch/requirements.txt
-    - name: Run PyTorch examples
-      run: |
-        python pytorch/pytorch_simple.py
-        python chainer/chainer_integration.py
-      env:
-        OMP_NUM_THREADS: 1
+    # - name: Run PyTorch examples
+    #   run: |
+    #     python pytorch/pytorch_simple.py
+    #   env:
+    #     OMP_NUM_THREADS: 1
     - name: Run PyTorch checkpoint example
       run: |
         timeout 20 python examples/pytorch/pytorch_checkpoint.py > /dev/null
         python examples/pytorch/pytorch_checkpoint.py > /dev/null
       env:
         OMP_NUM_THREADS: 1
-    - name: Run multi-node examples
-      run: |
-        STORAGE_URL=sqlite:///example.db
-        mpirun -n 2 -- python pytorch/pytorch_distributed_simple.py
-      env:
-        OMP_NUM_THREADS: 1
-    - name: Run PyTorch Ignite examples
-      run: |
-        python pytorch/pytorch_ignite_simple.py
-      env:
-        OMP_NUM_THREADS: 1
-    - name: Run PyTorch Lightning examples
-      run: |
-        python pytorch/pytorch_lightning_simple.py
-      env:
-        OMP_NUM_THREADS: 1
+    # - name: Run multi-node examples
+    #   run: |
+    #     STORAGE_URL=sqlite:///example.db
+    #     mpirun -n 2 -- python pytorch/pytorch_distributed_simple.py
+    #   env:
+    #     OMP_NUM_THREADS: 1
+    # - name: Run PyTorch Ignite examples
+    #   run: |
+    #     python pytorch/pytorch_ignite_simple.py
+    #   env:
+    #     OMP_NUM_THREADS: 1
+    # - name: Run PyTorch Lightning examples
+    #   run: |
+    #     python pytorch/pytorch_lightning_simple.py
+    #   env:
+    #     OMP_NUM_THREADS: 1
