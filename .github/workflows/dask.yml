@@ -28,7 +28,7 @@ jobs:
         pip install git+https://github.com/optuna/optuna.git
         python -c 'import optuna'
 
-        pip install -r dask/requirements.txt
+        pip install -r dask_ml/requirements.txt
     - name: Run examples
       run: |
         python dask_ml/dask_ml_simple.py
