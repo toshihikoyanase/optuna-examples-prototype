@@ -1,0 +1,4 @@
+dm-haiku
+numpy
+optax
+tensorflow-datasets
