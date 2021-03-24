@@ -1,4 +1,5 @@
 mpi4py
+plotly
 pytorch-ignite
 pytorch-lightning>=1.0.2
 skorch
