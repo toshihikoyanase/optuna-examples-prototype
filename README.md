@@ -1,5 +1,7 @@
-Optuna Examples
+Unofficial Optuna Examples
 ================
+
+**Note: This repository consists of the [examples](https://github.com/optuna/optuna/tree/master/examples) in [optuna/optuna](https://github.com/optuna/optuna) for the purpose of CI experiments. Please refer to the [official ones](https://github.com/optuna/optuna/tree/master/examples).**
 
 This repository contains a list of example codes written with Optuna.
 
