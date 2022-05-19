@@ -1,31 +1,20 @@
 defaults:
-  - hydra/sweeper: optuna
+  - override hydra/sweeper: optuna
+  - override hydra/sweeper/sampler: tpe
 
 hydra:
   sweeper:
-    optuna_config:
-      direction: minimize
-      study_name: simple_objective
-      storage: null
-      n_trials: 20
-      n_jobs: 1
-      sampler: tpe
+    sampler:
       seed: 123
-
-    search_space:
-      x:
-        type: float
-        low: -5.5
-        high: 5.5
-        step: 0.5
-      y:
-        type: categorical
-        choices: [-5, 0, 5]
-      z:
-        type: int
-        low: 1
-        high: 32
-        log: true
+    direction: minimize
+    study_name: simple_objective
+    storage: null
+    n_trials: 20
+    n_jobs: 1
+    params:
+      x: range(-5.5, 5.5, step=0.5)
+      y: choice(-5 ,0 ,5)
+      z: tag(log, int(interval(1, 32)))
 
 x: 1
 y: 1
